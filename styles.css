@@ -1,0 +1,129 @@
+.mugzify {
+    text-align: center; /* Center the text inside the aside element */
+    padding: 20px;
+    background-color: #b8b86c; /* Optional background for the aside */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+}
+
+.row {
+    max-width: 1000px;
+    margin: 0 auto; /* Center horizontally */
+    padding-bottom:5px;
+
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(65, 65, 65);
+    background-image: url('####');
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 2rem;
+}
+
+.slider-wrapper{
+    position: relative;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16/19;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem
+    hsla(0, 0% 0% 0.25);
+    border-radius: 0.5rem;
+    position:relative;
+}
+
+.slider img {
+    flex: 1 0 100%;
+    display: flex;
+    scroll-snap-align: start;
+    object-fit: cover;
+    max-width: 100%; /* Ensure the images don't exceed the container width */
+    height: 100%; /* Set a maximum height for the images (adjust as needed) */
+
+}
+
+.slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav a{
+width: 0.5rem;
+height: 0.5rem;
+border-radius: 50%;
+background-color: #ffffff;
+opacity: 0.75%;
+transition: opacity ease 0.25s;
+}
+
+.slider-nav a:hover {
+    opacity: 1;
+}
+
+.card {
+    border: 1px solid black;
+    width: 100%; 
+    max-width: 300px;
+
+}
+
+
+.card img {
+    width: 100%;
+    height: auto;
+} 
+
+.feature-img {
+    animation-delay: 1.5s;
+    width: 80px;
+    position: absolute;
+    top: 5px;
+    right: 35%;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: moveup 0.5s linear forwards;
+    background-color: transparent;
+    object-fit: cover;
+}
+
+@keyframes moveup {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/*Responsive design */
+@media (max-width: 540px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
