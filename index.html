@@ -92,67 +92,54 @@
   <div class="row">
   <script>  // Javascript
     let currentIndex = 0;
-    const slides = document.querySelectorAll('.slider img');
-    const navLinks = document.querySelectorAll('.slider-nav a');
-    let slideInterval; // Interval ID variable
-    
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
+const slides = document.querySelectorAll('.slider img');
+const navLinks = document.querySelectorAll('.slider-nav a');
+let slideInterval; // Interval ID variable
+
+// Function to show the slide
+function showSlide(index) {
+    slides.forEach((slide, i) => {
         slide.style.display = (i === index) ? 'block' : 'none';
-      });
-      navLinks.forEach((link, i) => {
+    });
+    navLinks.forEach((link, i) => {
         link.style.opacity = (i === index) ? 1 : 0.5;
-      });
-    }
-  
-    function showSlide(index) {
-  // Loop through each slide (image) and set its display style
-  slides.forEach((slide, i) => {
-    // If the current index matches the passed index, set display to 'block' (visible)
-    // Otherwise, set display to 'none' (hidden)
-    slide.style.display = (i === index) ? 'block' : 'none';
-  });
-
-  // Loop through each navigation link (dot) and adjust its opacity
-  navLinks.forEach((link, i) => {
-    // If the current index matches the navigation link's index, set opacity to 1 (fully visible)
-    // Otherwise, set opacity to 0.5 (semi-transparent)
-    link.style.opacity = (i === index) ? 1 : 0.5;
-  });
+    });
 }
 
+// Function to go to the next slide
 function nextSlide() {
-  // Increment the currentIndex by 1, but use modulo to ensure it wraps around
-  // When currentIndex is at the last slide, it goes back to the first one (0).
-  currentIndex = (currentIndex + 1) % slides.length;
-
-  // Call the showSlide function to display the next slide (based on updated currentIndex)
-  showSlide(currentIndex);
-}
-  
-    // Start the slideshow
+    currentIndex = (currentIndex + 1) % slides.length;
     showSlide(currentIndex);
-    startSlideShow(); // Start the interval when the page loads
-  
-    // Start the 5-second countdown from the beginning
-    slides.forEach((slide, index) => {
-      slide.addEventListener('click', () => {
+}
+
+// Start the slideshow
+function startSlideShow() {
+    slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+}
+
+// Start the slideshow when the page loads
+showSlide(currentIndex);
+startSlideShow();
+
+// Handle the navigation button clicks
+navLinks.forEach((link, index) => {
+    link.addEventListener('click', () => {
+        clearInterval(slideInterval); // Clear the interval when clicking a navigation link
+        currentIndex = index;         // Change the current image to the clicked image
+        showSlide(currentIndex);       // Show the clicked image
+        startSlideShow();              // Restart the interval
+    });
+});
+
+// Optionally, add a click listener to the slides if you want them to be clickable
+slides.forEach((slide, index) => {
+    slide.addEventListener('click', () => {
         clearInterval(slideInterval); // Clear the interval
         currentIndex = index;         // Change the current image to the clicked image
         showSlide(currentIndex);       // Show the clicked image
-        startSlideShow();              // Restart the countdown
-      });
+        startSlideShow();              // Restart the interval
     });
-  
-    // Handle the clicks
-    navLinks.forEach((link, index) => {
-      link.addEventListener('click', () => {
-        clearInterval(slideInterval); // Clear the interval
-        currentIndex = index;         // Change the current image to the clicked image
-        showSlide(currentIndex);       // Show the clicked image
-        startSlideShow();              // Restart the countdown
-      });
-    });
+});
   </script>  <!-- Javascript ends -->
 
 
@@ -218,6 +205,6 @@ function nextSlide() {
       });
   </script>
   <!-- Javascript ends-->
-   
+
   </body>
 </html>
