@@ -6,31 +6,32 @@
     <title>Ryhmätyö</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    <!-- oma css-tiedosto pitää olla Bootstrap
-     css tiedoston alapuolella-->
+    <!-- Own css file needs to be under Bootstrap css file. -->
 
 </head>
-  <body>
+<body>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
+    </script> 
     
+    
+         <!-- Article Section -->
+         <article class="mugzify">
+          <img src="images/logomug.png" class="feature-img">
+          <h1> Mugzify</h1>
 
-     <!-- Article Section -->
-     <article class="mugzify">
-      <img src="images/mug.png" class="feature-img">
-      <h1> Mugzify</h1>
-        </article>
-
-        
 
         <!-- Article Section for Navigation and Content -->
-        <article class="col-md-12">
+        <div class="menu">
           <nav class="navbar navbar-expand-sm bg-body-tertiary">
             <div class="container-fluid">
               <a class="navbar-brand" href="#"></a>
+              
+              <!-- Hamburger Menu Button -->
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
+            
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item dropdown">
@@ -38,117 +39,185 @@
                       Printing service
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Pictures</a></li>
-                      <li><a class="dropdown-item" href="#">Price list</a></li>
-                      <li><a class="dropdown-item" href="#">Is my picture good enough?</a></li>
+                      <li><a class="dropdown-item" href="#">Create an item</a></li>
+                      <li><a class="dropdown-item" href="#">Guide to selecting a picture</a></li>
                     </ul>
                   </li>
-
-
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    How it will look?
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Test a mug</a></li>
-                    <li><a class="dropdown-item" href="#">Test a t-shirt</a></li>
-                  </ul>
-                </li>
-
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Learn more
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Delivery</a></li>
-                  <li><a class="dropdown-item" href="#">Frequently asked questions</a></li>
-                  <li><a class="dropdown-item" href="#">Contact</a></li>
-                </ul>
-              </li>
-
-              <!-- Ending Article Section for Navigation and Content -->
-
+                  
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      About us
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Our story</a></li>
+                      <li><a class="dropdown-item" href="#">Our reviews</a></li>
+                    </ul>
+                  </li>
+            
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Learn more
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Delivery</a></li>
+                      <li><a class="dropdown-item" href="#">Frequently asked questions</a></li>
+                      <li><a class="dropdown-item" href="#">Contact</a></li>
+                    </ul>
+                  </li>
                 </ul>
               </div>
             </div>
           </nav>
         </article>
+        <!-- Ending Article Section for Navigation and Content -->
 
 
+
+        <!-- Slideshow -->
       <section class="container">
         <div class="slider-wrapper">
           <div class="slider">
-            <img src="images/Coffee.jpg" alt="" class="slide" id="slide-1"> <!-- kuvat vaativat "slide" luokan, jotta ne toimivat slideshowssa-->
-            <img src="images/Coffee1.jpg" alt="" class="slide" id="slide-2">
-            <img src="images/Coffee2.jpg" alt="" class="slide" id="slide-3">
+            <img src="images/yourdesign.jpg" alt="" class="slide" id="slide-1"> <!-- kuvat vaativat "slide" luokan, jotta ne toimivat slideshowssa-->
+            <img src="images/Baby.jpg" alt="" class="slide" id="slide-2">
+            <img src="images/Black.png" alt="" class="slide" id="slide-3">
           </div>
 
             <div class="slider-nav">
-              <a href="#slide-1"></a>
-              <a href="#slide-2"></a>
-              <a href="#slide-3"></a>
+              <a button="#slide-1"></a>
+              <a button="#slide-2"></a>
+              <a button="#slide-3"></a>
             </div>
+            <!-- Slideshow ends -->
             
-            <div class="row">
-            <script>  // Javascript alkaa
-              let currentIndex = 0;
-              const slides = document.querySelectorAll('.slider img');
-              const navLinks = document.querySelectorAll('.slider-nav a');
-              let slideInterval; // Intervalli ID muuttuja
-            
-              function showSlide(index) {
-                slides.forEach((slide, i) => {
-                  slide.style.display = (i === index) ? 'block' : 'none';
-                });
-                navLinks.forEach((link, i) => {
-                  link.style.opacity = (i === index) ? 1 : 0.5;
-                });
-              }
-            
-              function nextSlide() {
-                currentIndex = (currentIndex + 1) % slides.length;
-                showSlide(currentIndex);
-              }
-            
-              // Funktio slideshow, joka vaihtaa kuvan 5 sekunnin välein.
-              function startSlideShow() {
-                slideInterval = setInterval(nextSlide, 5000);
-              }
-            
-              // Aloittaa slideshown
-              showSlide(currentIndex);
-              startSlideShow(); // Start the interval when the page loads
-            
-              // Aloita 5 sekunnin laskuri alusta
-              slides.forEach((slide, index) => {
-                slide.addEventListener('click', () => {
-                  clearInterval(slideInterval); // Tyhjennä intervalli
-                  currentIndex = index;         // Muuta nykyinen kuva klitakuksi kuvaksi
-                  showSlide(currentIndex);       // Näytä klikattu kuva
-                  startSlideShow();              // Aloita laskuri alusta
-                });
-              });
-            
-              // Hoitaa klikkaukset
-              navLinks.forEach((link, index) => {
-                link.addEventListener('click', () => {
-                  clearInterval(slideInterval); // Tyhjennä intervalli
-                  currentIndex = index;         // Muuta nykyinen kuva klitakuksi kuvaksi
-                  showSlide(currentIndex);       // Näytä klikattu kuva
-                  startSlideShow();              // Aloita laskuri alusta
-                });
-              });
-            </script>  <!-- Javascript päättyy -->
+  <div class="row">
+  <script>  // Javascript
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slider img');
+    const navLinks = document.querySelectorAll('.slider-nav a');
+    let slideInterval; // Interval ID variable
+    
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.display = (i === index) ? 'block' : 'none';
+      });
+      navLinks.forEach((link, i) => {
+        link.style.opacity = (i === index) ? 1 : 0.5;
+      });
+    }
+  
+    function showSlide(index) {
+  // Loop through each slide (image) and set its display style
+  slides.forEach((slide, i) => {
+    // If the current index matches the passed index, set display to 'block' (visible)
+    // Otherwise, set display to 'none' (hidden)
+    slide.style.display = (i === index) ? 'block' : 'none';
+  });
 
+  // Loop through each navigation link (dot) and adjust its opacity
+  navLinks.forEach((link, i) => {
+    // If the current index matches the navigation link's index, set opacity to 1 (fully visible)
+    // Otherwise, set opacity to 0.5 (semi-transparent)
+    link.style.opacity = (i === index) ? 1 : 0.5;
+  });
+}
+
+function nextSlide() {
+  // Increment the currentIndex by 1, but use modulo to ensure it wraps around
+  // When currentIndex is at the last slide, it goes back to the first one (0).
+  currentIndex = (currentIndex + 1) % slides.length;
+
+  // Call the showSlide function to display the next slide (based on updated currentIndex)
+  showSlide(currentIndex);
+}
+  
+    // Start the slideshow
+    showSlide(currentIndex);
+    startSlideShow(); // Start the interval when the page loads
+  
+    // Start the 5-second countdown from the beginning
+    slides.forEach((slide, index) => {
+      slide.addEventListener('click', () => {
+        clearInterval(slideInterval); // Clear the interval
+        currentIndex = index;         // Change the current image to the clicked image
+        showSlide(currentIndex);       // Show the clicked image
+        startSlideShow();              // Restart the countdown
+      });
+    });
+  
+    // Handle the clicks
+    navLinks.forEach((link, index) => {
+      link.addEventListener('click', () => {
+        clearInterval(slideInterval); // Clear the interval
+        currentIndex = index;         // Change the current image to the clicked image
+        showSlide(currentIndex);       // Show the clicked image
+        startSlideShow();              // Restart the countdown
+      });
+    });
+  </script>  <!-- Javascript ends -->
 
 
             </div>
           </div>
         </section>
+        <!-- Slideshow ends-->
+
+
+        <!-- Image boxes -->
+        <section class="card-container">
+      
+          <div class="card">
+              <img src="images/White.avif" class="img-fluid" alt="White mug">
+              <div class="Paddingtext">
+              <h2>Personalized Mugs!</h2> 
+            </div>
+          </div>
+  
+          <div class="card">
+            <img src="images/Bottle.jpg" class="img-fluid" alt="Bottle">
+            <div class="Paddingtext">
+            <h2>Make Every Sip Special.</h2>
+          </div>
+            
+        </div>
+      
+          <div class="card">
+              <img src="images/Red.jpg" class="img-fluid" alt="Red mug">
+              <div class="Paddingtext">  <!-- in class "Paddingtext" we give the text 6 pixels of padding-left. -->
+              <h2>Your Mug, Your Story.</h2>
+              </div>
+              
+          </div>
+      </section>
+      <!-- Image boxes end -->
 
 
 
+      <!--Scrolling logo animation -->
+      <div class="scrolling-wrapper">
+        <div class="scrolling-container">
+            <img src="images/mugtransparent.png" alt="logo">
+        </div>
+    </div>
+
+    <!-- Javascript-->
+    <script>
+      const container = document.querySelector('.scrolling-container');
+      const imageCount = 500;  // Number of images you want to display
+  
+      for (let i = 0; i < imageCount; i++) {
+          const img = document.createElement('img');
+          img.src = 'images/mugtransparent.png';  // Replace with your actual image source
+          img.alt = 'coffeemug logo';
+          container.appendChild(img);
+      }
+  
+      // Duplicate images to ensure seamless scrolling
+      const images = container.querySelectorAll('img');
+      images.forEach(img => {
+          container.appendChild(img.cloneNode(true)); // Clone and append the image
+      });
+  </script>
+  <!-- Javascript ends-->
+   
   </body>
 </html>

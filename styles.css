@@ -1,9 +1,14 @@
 .mugzify {
     text-align: center; /* Center the text inside the aside element */
-    padding: 20px;
+    padding: 10px;
     background-color: #b8b86c; /* Optional background for the aside */
     border-radius: 10px; /* Optional: rounded corners */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+}
+
+.menu {
+    font-size: 20px;
+
 }
 
 .row {
@@ -11,25 +16,18 @@
     margin: 0 auto; /* Center horizontally */
     padding-bottom:5px;
 
+
 }
 
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgb(65, 65, 65);
-    background-image: url('####');
-}
 
-
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 .container {
     padding: 2rem;
+
 }
 
 .slider-wrapper{
@@ -71,23 +69,30 @@ body {
 }
 
 .slider-nav a{
-width: 0.5rem;
-height: 0.5rem;
+width: 0.8rem;
+height: 0.8rem;
 border-radius: 50%;
 background-color: #ffffff;
 opacity: 0.75%;
 transition: opacity ease 0.25s;
+
 }
 
 .slider-nav a:hover {
     opacity: 1;
 }
 
+
 .card {
     border: 1px solid black;
     width: 100%; 
     max-width: 300px;
+    padding-left: 0px;
 
+}
+
+.Paddingtext {
+    padding-left: 6px;
 }
 
 
@@ -96,27 +101,69 @@ transition: opacity ease 0.25s;
     height: auto;
 } 
 
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 0fr;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    gap: 20px;
+    padding: 20px;
+
+}
+
 .feature-img {
     animation-delay: 1.5s;
     width: 80px;
-    position: absolute;
-    top: 5px;
+    position: static;
     right: 35%;
-    opacity: 0;
+    opacity: 1;
     transform: translateY(20px);
     animation: moveup 0.5s linear forwards;
     background-color: transparent;
     object-fit: cover;
 }
 
-@keyframes moveup {
+
+.scrolling-wrapper {
+    width: 100%; /* Full width of the container */
+    overflow: hidden; /* Hide the part of the image that overflows the container */
+    position: relative;
+    background-color: #b8b86c;
+}
+
+.scrolling-container {
+    display: flex; /* Use flexbox to align the images horizontally */
+    animation: scrollLeft 40s linear infinite; /* Apply the scrolling animation (adjust speed) */
+    white-space: nowrap; /* Prevent images from wrapping to a new line */
+}
+
+.scrolling-container img {
+    height: 80px; /* Set the height of each image */
+    margin-right: 10px; /* Optional: Add space between images */
+    opacity: 1; /* Optional: Set transparency */
+    display: inline-block; /* Ensure images stay inline */
+}
+
+/* Create the scrolling animation */
+@keyframes scrollLeft {
     0% {
-        opacity: 0;
-        transform: translateY(20px);
+        transform: translateX(0%); /* Start at the left */
     }
     100% {
-        opacity: 1;
+        transform: translateX(-100%); /* Move to the left (outside the container) */
+    }
+}
+
+
+@keyframes moveup {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
         transform: translateY(0);
+        opacity: 1;
     }
 }
 
