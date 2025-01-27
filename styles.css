@@ -1,9 +1,11 @@
 .mugzify {
-    text-align: center; /* Center the text inside the aside element */
+    text-align: center;
     padding: 10px;
-    background-color: #b8b86c; /* Optional background for the aside */
-    border-radius: 10px; /* Optional: rounded corners */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+    background-color: #b8b86c;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Ensure padding is included in the element's size */
 }
 
 .menu {
