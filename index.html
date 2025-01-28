@@ -188,118 +188,39 @@ slides.forEach((slide, index) => {
   </section>
 
 
-<!-- Joonatan osuuus -->
+<!-- Joonatan osuus -->
 
-<article class="Printing service"></article>
-    <header>
-        <h1>Printing service</h1>
-    </header>
-    <main>
-        <section class="preview-section">
-            <div class="mug-preview">
-                <img src="images/mugtransparent.png" alt="Mug" id="mug">
-                <div class="image-overlay">
-                    <p><b>Upload your image</b></p>
-                </div>
+
+    <div class="container">
+        <div class="product-preview">
+            <img src="images/mugtransparent.png" alt="Upload your image" class="product-image">
+        </div>
+        <div class="product-options">
+            <h2>Select</h2>
+            <label><input type="radio" name="product" checked> Coffee mug - 13.95€</label>
+            <label><input type="radio" name="product"> Water bottle - 15.95€</label>
+            <button class="upload-btn">Select your own image</button>
+            <div class="quantity">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" value="1" min="1">
             </div>
-        </section>
-
-        <section class="options-section">
-            <div class="mug-options">
-                <h3>Select</h3>
-                <label>
-                    <input type="radio" name="mug-type" value="Coffee mug" checked>
-                    Coffee mug - 13.95 €
-                </label>
-                <label>
-                    <input type="radio" name="mug-type" value="Water bottle">
-                    Water bottle - 15.95 €
-                </label>
-            </div>
-            <form>
-                <label class="upload-button" for="file-upload" role="button">Select your own image</label>
-                <input type="file" id="file-upload" accept="image/*">
-            </form>
-            <div class="quantity-and-button">
-                <div class="quantity">
-                    <label for="quantity">Quantity:</label>
-                    <input type="number" id="quantity" value="1" min="1">
-                </div>
-                <button class="basket-button">Into basket</button>
-            </div>
-            <!-- Delivery Section -->
-            <section id="delivery">
-                <h3>Delivery</h3>
-                <p>We offer international shipping on all orders.</p>
-                <ul>
-                    <li>Standard Shipping: 3–5 business days. Priced 4,95€</li>
-                    <li>Express Shipping: 1–2 business days. Priced 9,95€</li>
-                    <li>Free Shipping: On orders over 50€</li>
-                </ul>
-            </section>
-            <!-- Guide -->
-            <section class="guide-section">
-                <div class="help-guide">
-                <h3>Guide to selecting a picture</h3>
-                <p>We recommend you to select a picture with these requirements:</p>
-                <ul>
-                    <li>Height of 600px and width of 600px</li>
-                    <li>Clear</li>
-                </ul>
-            </div>
-            </section>
-    </main>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
+            <button class="cart-btn">Into basket</button>
+            <h3>Delivery</h3>
+            <ul>
+                <li>Standard Shipping: 3-5 business days. Priced 4.95€</li>
+                <li>Express Shipping: 1-2 business days. Priced 9.95€</li>
+                <li>Free Shipping: On orders over 50€</li>
+            </ul>
+        </div>
+    </div>
+    <div class="image-guide">
+        <h3>Guide to selecting a picture</h3>
+        <p>We recommend you select a picture with these requirements:</p>
+        <ul>
+            <li>Height of 600px and width of 600px</li>
+            <li>Clear</li>
+        </ul>
+    </div>
 
   <div class="container">
     <!-- Reviews Section -->

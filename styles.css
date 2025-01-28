@@ -51,6 +51,7 @@ body {
 .slider-wrapper{
     position: relative;
     max-width: 550px;
+    max-height: auto;
     margin: 0 auto;
 }
 
@@ -105,7 +106,6 @@ transition: opacity ease 0.25s;
     border: 1px solid black;
     width: 100%; 
     max-width: 300px;
-    padding-left: 0px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 
 }
@@ -124,7 +124,7 @@ transition: opacity ease 0.25s;
 
 .card-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 0fr;
+    grid-template-columns: 1fr 1fr 1fr;
     max-width: 1200px; 
     margin: 0 auto; 
     gap: 20px;
@@ -351,242 +351,80 @@ section#faqs {
 
 /* Joonatan osuus */
 
-
-
-header {
-    text-align: center;
-    background-color: #b8b86c;
-    padding: 10px;
-    border-radius: 10px;
-    width: 100%; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      align-items: flex-start;
+  }
+  
+  .product-preview {
+      flex: 1;
+      max-width: 550px;
+      max-height: auto;
+  }
+  
+  .product-image {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+.quantity {
+    padding-top: 2px;
 }
 
-/* Body duplikaatti poistettu */
-
-
-/* h1 banneri poistettu. Se hajotti bannerin, eikä sen poistaminen hajottanut mitään muuta */
-
-h2 {
-    margin: 5px 0;
-    font-weight: 500;
-    line-height: 1.2;
-}
-
-main {
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* Centers content horizontally */
-    justify-content: center; /* Centers content vertically */
-    gap: 50px;
-    width: 100%;
-}
-
-.preview-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.mug-preview {
-    position: relative;
-    width: 800px; /* Adjust size as needed */
-    height: 800px;
-    background-color: #f9f9f9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    background-image: url('images/51tYVBkZsCS.jpg'); /* Mug background image */
-    background-size: cover; /* Cover the mug area */
-    background-position: center; /* Center the background image */
-    overflow: hidden; /* Prevent overflow of the image */
-    border-radius: 10px;
-    margin-bottom: 30px;
-    margin-top: 30px;
-
-}
-
-.mug-preview img {
-    object-fit: contain; /* Preserve aspect ratio of uploaded image */
-    position: absolute;
-    max-width: 100%;
-    max-height: 100%;
-}
-
-
-.image-overlay {
-    position: absolute;
-    color: #555;
-    font-weight: bold;
-    padding: 150px;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 25px;
-    left: 114px;
-
-
-}
-
-
-.options-section, .guide-section{
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    width: 550px; 
-    height: 420px;
-    margin-bottom: 10%;
-    gap: 0.5%;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.mug-options h3, 
-.delivery-section h3, .guide-section h3 {
-    background-color: #b8b86c; 
-    color: rgb(65, 65, 65); 
-    text-align: center; 
-    padding: 10px 0; 
-    width: 100%; 
-    border-radius: 8px;
-    margin: 0 auto 15px auto; 
-    box-sizing:border-box;
-
-}
-
-
-
-.mug-options h3, .delivery-section h3 {
-    margin-bottom: 5px;
-    
-}
-label {
-    display: block;
-    margin: 5px 0;
-}
-
-button, input[type="file"] {
-    padding: 8px 14px;
-    margin: 5px 0;
-    border: none;
-    border-radius: 5px;
-}
-
-.upload-button {
-    margin-top: 20px;
-    padding: 10px 100px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.upload-button:hover {
-    background-color: #0056b3;
-}
-
-input[type="file"] {
-    display: none;
-}
-
-.basket-button {
-    padding: 16px 26px;
-    margin-top: 7px;
-    background-color: #28a745;
-    color: #fff;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-}
-
-.basket-button:hover {
-    background-color: #1e7e34;
-}
-
-.quantity-and-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    margin: 10px 0;
-}
-
-.quantity input {
-    width: 60px;
-    height: 20px;
-    text-align: center;
-}
-
-.delivery-section {
-    margin-top: 20px;
-    text-align: center;
-    
-}
-
-.guide-section {
-    margin-top: 20px;
-    height: auto;  /* Let content dictate the height, no need to fix height */
-}
-
-.guide-section ul {
-    list-style: disc;
-    padding-left: 20px;
-}
-
-.guide-section li {
-    margin-bottom: 10px;
-}
-
-.help-guide {
-    display: flex;
-    flex-direction: column;
-    
-
-}
-
-
-/* Adjust layout for smaller screens */
-@media (max-width: 740px) {
-    main {
-        flex-direction: column;
-        align-items: center;
-        width: 100%; /* Ensure the whole container uses the full width */
-    }
-
-    .mug-preview {
-        max-width: 300px;
-        max-height: 300px;
-    }
-    .preview-section {
-        max-width: 300px;
-        max-height: 300px;
-    }
-    
-
-
-    .options-section, .guide-section {
-        width: 90%; /* Use 90% width on small screens */
-        height: auto; /* Let the content dictate the height */
-        margin-bottom: 10px; /* Slight margin for spacing */
-    }
-
-    /* Fix content being squeezed inside .options-section */
-    .mug-options {
-        display: flex;
-        flex-direction: column; /* Stack content vertically */
-        align-items: flex-start; /* Align items to the left */
-    }
-
-    /* Add some space around the labels inside the options */
-    .options-section label {
-        margin: 8px 0; /* Increase margin between options */
-
-    }
-}
+  .product-options {
+      flex: 1;
+      max-width: 550px;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .upload-btn, .cart-btn {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+  }
+  
+  .upload-btn {
+      background-color: #007BFF;
+      color: white;
+      margin: 5px;
+  }
+  
+  .cart-btn {
+      background-color: #28A745;
+      color: white;
+  }
+  
+  .image-guide, .reviews {
+      max-width: 800px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .review {
+      margin-bottom: 15px;
+  }
+  
+  @media (max-width: 768px) {
+      .container {
+          flex-direction: column;
+          align-items: center;
+      }
+  
+      .product-preview, .product-options {
+          max-width: 100%;
+      }
+  }
