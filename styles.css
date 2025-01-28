@@ -374,7 +374,8 @@ header {
 
 .product-preview {
       flex: 1;
-      max-width: 750px;
+      max-width: 600px;
+
       position: relative;
   }
 
@@ -479,7 +480,7 @@ header {
 
 }
 
-  .image-guide, .reviews {
+  .image-guide {
       max-width: 800px;
       margin: 20px auto;
       background: white;
@@ -487,6 +488,14 @@ header {
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
+
+  .reviews {
+
+    max-width: 1200px;
+    margin: 20px auto;
+
+  }
+
 
   .review {
       margin-bottom: 15px;
