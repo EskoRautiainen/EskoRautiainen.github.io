@@ -14,7 +14,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script> 
     
-    
+        <!-- Translation Button -->
+
+        <div id="translateButton" title="Switch Language">
+          <img id="flagImage" src="images/Flag_of_Sweden.svg.png" alt="Swedish Flag" />
+        </div>
+
          <!-- Article Section -->
          <article class="mugzify">
           <img src="images/logomug.png" class="feature-img">
@@ -27,6 +32,7 @@
             <div class="container-fluid">
               <a class="navbar-brand" href="#"></a>
               
+
               <!-- Hamburger Menu Button -->
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -235,8 +241,8 @@ slides.forEach((slide, index) => {
 </section>
 
 
-    <!-- Reviews Section -->
-    <section id="reviews">
+  <!-- Reviews Section -->
+  <section id="reviews">
     <div class="reviews">
 
         <div class="review">
@@ -253,7 +259,6 @@ slides.forEach((slide, index) => {
         </div>
     </div>
     </section>
-
 
     <!-- FAQ Section -->
       <section id="faqs">
@@ -289,6 +294,192 @@ slides.forEach((slide, index) => {
           </p>
         </details>
     </section>
+
+    <script>
+    const faqsEnglish = [
+    {
+      question: "How can I customize my mug or bottle?",
+      answer: "You can easily customize your mug or bottle using our design tool! Upload your image, add text, choose colors, and preview your design before placing your order. Simply click 'Start Customizing' to begin."
+    },
+    {
+      question: "What file formats can I upload for custom designs?",
+      answer: "We accept popular file formats like JPEG, PNG, PDF, and SVG. For the best results, ensure your image has a high resolution (300 DPI or higher)."
+    },
+    {
+      question: "Can I order in bulk for events or businesses?",
+      answer: "Yes! We offer special discounts for bulk orders, perfect for events, corporate gifts, or promotional items. Contact us via [link to contact form] to discuss pricing and customization options."
+    },
+    {
+      question: "What if I’m not satisfied with my custom product?",
+      answer: "We strive for 100% customer satisfaction. If your order arrives damaged or there’s an issue with the customization, let us know within 7 days of delivery. We’ll work with you to resolve the problem, whether through a replacement or refund."
+    },
+    {
+      question: "How long does it take to process and deliver my order?",
+      answer: "Once you place your order, it typically takes 2–3 business days to create your custom product. Shipping times vary based on your location and chosen delivery method. You’ll receive a tracking link once your order ships."
+    }
+  ];
+  
+  const faqsSwedish = [
+    {
+      question: "Hur kan jag anpassa min mugg eller flaska?",
+      answer: "Du kan enkelt anpassa din mugg eller flaska med vårt designverktyg! Ladda upp din bild, lägg till text, välj färger och förhandsgranska din design innan du gör din beställning. Klicka bara på 'Börja anpassa' för att komma igång."
+    },
+    {
+      question: "Vilka filformat kan jag ladda upp för anpassade designer?",
+      answer: "Vi accepterar populära filformat som JPEG, PNG, PDF och SVG. För bästa resultat, se till att din bild har en hög upplösning (300 DPI eller högre)."
+    },
+    {
+      question: "Kan jag beställa i bulk för evenemang eller företag?",
+      answer: "Ja! Vi erbjuder specialrabatter för beställningar i bulk, perfekt för evenemang, företagsgåvor eller reklamartiklar. Kontakta oss via [länk till kontaktformulär] för att diskutera priser och anpassningsalternativ."
+    },
+    {
+      question: "Vad händer om jag inte är nöjd med min anpassade produkt?",
+      answer: "Vi strävar efter 100 % kundnöjdhet. Om din beställning anländer skadad eller om det finns problem med anpassningen, meddela oss inom 7 dagar efter leverans. Vi arbetar med dig för att lösa problemet, antingen genom en ersättning eller återbetalning."
+    },
+    {
+      question: "Hur lång tid tar det att bearbeta och leverera min beställning?",
+      answer: "När du gör din beställning tar det vanligtvis 2–3 arbetsdagar att skapa din anpassade produkt. Leveranstiden varierar beroende på din plats och vald leveransmetod. Du får en spårningslänk när din beställning skickas."
+    }
+  ];
+  
+  const reviewsEnglish = [
+    { title: "Review 1: ⭐⭐⭐⭐⭐", text: '"I love my customized mug! The design is perfect and the quality is excellent. It’s become my go-to for coffee mug every morning!"' },
+    { title: "Review 2: ⭐⭐⭐⭐⭐", text: '"This mug is amazing! The print is vibrant, and it feels really durable. A unique and personal touch to my daily routine!"' },
+    { title: "Review 3: ⭐⭐⭐⭐⭐", text: '"My custom mug turned out great! The design is clear, and it’s the perfect size. I get compliments every time I use it!"' }
+  ];
+  
+  const reviewsSwedish = [
+    { title: "Recension 1: ⭐⭐⭐⭐⭐", text: '"Jag älskar min anpassade mugg! Designen är perfekt och kvaliteten är utmärkt. Den har blivit min favoritmugg varje morgon!"' },
+    { title: "Recension 2: ⭐⭐⭐⭐⭐", text: '"Den här muggen är fantastisk! Trycket är livfullt och den känns verkligen hållbar. En unik och personlig touch till min dagliga rutin!"' },
+    { title: "Recension 3: ⭐⭐⭐⭐⭐", text: '"Min anpassade mugg blev jättebra! Designen är tydlig och den har perfekt storlek. Jag får komplimanger varje gång jag använder den!"' }
+  ];
+  
+  let isSwedish = true; // Default to Swedish
+
+// Paths to flag images
+const swedishFlag = "images/Flag_of_Sweden.svg.png";
+const englishFlag = "images/Flag_of_the_United_Kingdom.png";
+
+function toggleTranslation() {
+  const faqsSection = document.getElementById('faqs');
+  const reviewsSection = document.querySelector('.reviews');
+  const flagImage = document.getElementById('flagImage');
+
+  if (isSwedish) {
+    // Show English content and switch to Swedish flag
+    flagImage.src = swedishFlag; // Show Swedish flag (to switch back)
+    flagImage.alt = "Swedish Flag";
+
+    // Update FAQs and Reviews content to English
+    faqsSection.querySelectorAll('details').forEach((detail, index) => {
+      detail.querySelector('summary').textContent = faqsEnglish[index].question;
+      detail.querySelector('p').textContent = faqsEnglish[index].answer;
+    });
+
+    reviewsSection.innerHTML = '';
+    reviewsEnglish.forEach(review => {
+      const div = document.createElement('div');
+      div.classList.add('review');
+      div.innerHTML = `<h3>${review.title}</h3><p>${review.text}</p>`;
+      reviewsSection.appendChild(div);
+    });
+  } else {
+    // Show Swedish content and switch to English flag
+    flagImage.src = englishFlag; // Show English flag (to switch back)
+    flagImage.alt = "English Flag";
+
+    // Update FAQs and Reviews content to Swedish
+    faqsSection.querySelectorAll('details').forEach((detail, index) => {
+      detail.querySelector('summary').textContent = faqsSwedish[index].question;
+      detail.querySelector('p').textContent = faqsSwedish[index].answer;
+    });
+
+    reviewsSection.innerHTML = '';
+    reviewsSwedish.forEach(review => {
+      const div = document.createElement('div');
+      div.classList.add('review');
+      div.innerHTML = `<h3>${review.title}</h3><p>${review.text}</p>`;
+      reviewsSection.appendChild(div);
+    });
+  }
+
+  isSwedish = !isSwedish; // Toggle language state
+}
+
+document.getElementById('translateButton').addEventListener('click', toggleTranslation);
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Combined Info Section -->
     <div class="info">
