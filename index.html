@@ -39,7 +39,7 @@
                       Printing Service
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#createmug">Create An Item</a></li>
+                      <li><a class="dropdown-item" href="#createmugs">Create An Item</a></li>
                       <li><a class="dropdown-item" href="#guidetomugs">Guide To Selecting A Picture</a></li>
                     </ul>
                   </li>
@@ -191,7 +191,8 @@ slides.forEach((slide, index) => {
 <!-- Joonatan osuus -->
 
 <article class="Printing service"></article>
-  <header>
+<section id="createmugs"> </section>
+<header>
     <h1>Printing service</h1>
   </header>
     <div class="container">
@@ -201,6 +202,7 @@ slides.forEach((slide, index) => {
                 <p>Upload your image</p>
               </div>
         </div>
+
         <div class="product-options">
             <h2>Select</h2>
             <label><input type="radio" name="product" checked> Coffee mug - 13.95€</label><br>
@@ -211,14 +213,18 @@ slides.forEach((slide, index) => {
                 <input type="number" id="quantity" value="1" min="1">
             </div>
             <button class="cart-btn">Into basket</button>
+            <section id="delivery"></section>
             <h3>Delivery</h3>
             <ul>
                 <li>Standard Shipping: 3-5 business days. Priced 4.95€</li>
                 <li>Express Shipping: 1-2 business days. Priced 9.95€</li>
                 <li>Free Shipping: On orders over 50€</li>
+              </section>
             </ul>
         </div>
     </div>
+    
+    <section id="guidetomugs">
     <div class="image-guide">
         <h3>Guide to selecting a picture</h3>
         <p>We recommend you to select a picture with these requirements:</p>
@@ -226,6 +232,7 @@ slides.forEach((slide, index) => {
             <p> Picture's maximum width and height should be 600x500px.  </p>
         </ul>
     </div>
+</section>
 
 
     <!-- Reviews Section -->

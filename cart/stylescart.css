@@ -7,6 +7,10 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
 }
 
+html {          /* Always displays scroll bar, because not having it slightly moves the logo away from the center of the screen. */
+    overflow-y: scroll;
+}
+
 .menu {
     font-size: 18px;
 
