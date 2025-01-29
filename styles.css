@@ -1,3 +1,5 @@
+/* Esko's section */
+
 .mugzify {
     text-align: center;
     padding: 10px;
@@ -13,7 +15,7 @@
 
 }
 
-#translateButton {
+#translateButton { /* Joonatan's part */
     position: absolute;
     top: 10px;
     left: 10px;
@@ -27,7 +29,7 @@
     align-items: center;
   }
 
-  #flagImage {
+  #flagImage { /* Joonatan's part */
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -83,7 +85,6 @@ body {
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    hsla(0, 0%, 0%, 0.25);
     border-radius: 0.5rem;
     position:relative;
 }
@@ -129,7 +130,7 @@ transition: opacity ease 0.25s;
     display: flex;
 }
 
-.Paddingtext {
+.padding-text {
     margin: 0 auto;
 }
 
@@ -215,16 +216,7 @@ transition: opacity ease 0.25s;
 }
 
 
-/* Farhad osuus */
-
-
-
-/* General Styling Duplikaatti. Poistin */
-
-/* Header Styling Duplikaatti. Poistin */
-
-/* Header duplikaatti. Poistin */
-
+/* Farhad's section */
 /* Menu Styling */
 nav a {
     color: white;
@@ -362,10 +354,7 @@ section#faqs {
     }
 }
 
-/* Joonatan osuus */
-
-
-
+/* Joonatan's section */
 header {
     text-align: center;
     background-color: #b8b86c;
