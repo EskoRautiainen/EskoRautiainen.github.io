@@ -298,6 +298,11 @@ details p {
     margin-bottom: 15px; 
 }
 
+.return-policy {
+    position: relative;
+    left: -28px; /* Moves the element 32px to the left */
+}
+
 .payment-methods img {
     width: 50px;
     margin-right: 15px;
@@ -333,7 +338,8 @@ section#faqs {
     }
 
     .info-content {
-        flex-direction: column; 
+        flex-direction: column;
+        align-items: center;
     }
 
     .contact, .payment-methods, .return-policy {
