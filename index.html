@@ -286,6 +286,13 @@
 
 <!-- Joonatan's translation section starts -->
 <script>
+
+const storyEnglish = 
+  "We are Esko, Joonatan, and Farhad, a team of passionate designers and crafters united by a love for creating mugs that inspire. Founded in 2025 and based in Finland, our company is dedicated to bringing joy through thoughtfully designed mugs that brighten your day. Whether you're sipping your morning coffee or gifting a special someone, our mugs are made to bring a smile to your face. Crafted with care and creativity, each piece reflects our commitment to quality and unique design.";
+
+  const storySwedish = 
+  "Vi är Esko, Joonatan och Farhad, ett team av passionerade designers och hantverkare förenade av kärleken till att skapa inspirerande muggar. Grundat 2025 och baserat i Finland är vårt företag dedikerat till att sprida glädje genom genomtänkt designade muggar som lyser upp din dag. Oavsett om du njuter av ditt morgonkaffe eller ger bort en speciell present är våra muggar skapade för att ge ett leende. Med omsorg och kreativitet speglar varje mugg vårt engagemang för kvalitet och unik design.";
+
   const faqsEnglish = [
     {
       question: "How can I customize my mug or bottle?",
@@ -364,6 +371,7 @@
   function toggleTranslation() {
     const faqsSection = document.getElementById('faqs');
     const reviewsSection = document.querySelector('.reviews');
+    const storySection = document.querySelector('#story .introduction p');
     const flagImage = document.getElementById('flagImage');
 
     if (isSwedish) {
@@ -382,6 +390,9 @@
         div.innerHTML = `<h3>${review.title}</h3><p>${review.text}</p>`;
         reviewsSection.appendChild(div);
       });
+
+      storySection.textContent = storyEnglish;
+
     } else {
       flagImage.src = englishFlag; // Show English flag
       flagImage.alt = "English Flag";
@@ -399,6 +410,8 @@
         reviewsSection.appendChild(div);
       });
     }
+
+    storySection.textContent = storySwedish;
 
     isSwedish = !isSwedish;
     faqsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
