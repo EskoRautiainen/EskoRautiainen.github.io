@@ -300,7 +300,7 @@ details p {
 
 .return-policy {
     position: relative;
-    left: -28px; /* Moves the element 32px to the left */
+    left: -24px; /* Moves the element 24px to the left */
 }
 
 .payment-methods img {
